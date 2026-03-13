@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Smart Todo Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<h1>Task Manager</h1>
+
+<!-- input area -->
+<div class="task-input">
+
+<input type="text" id="taskInput" placeholder="Enter task">
+
+<input type="date" id="taskDate">
+
+<button onclick="addTask()">Add</button>
+
+</div>
+
+<!-- search -->
+<input type="text" id="searchInput" placeholder="Search task..." onkeyup="searchTask()">
+
+<!-- progress -->
+<div class="progressBox">
+
+<div id="progressBar"></div>
+
+</div>
+
+<ul id="taskList"></ul>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

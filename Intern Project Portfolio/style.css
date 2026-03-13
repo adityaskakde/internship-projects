@@ -1,0 +1,164 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f8fafc;
+color:#1e293b;
+}
+
+/* navbar */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#e6f0f95c;
+border-bottom:01px solid #e2e8f0;
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+}
+
+.navbar li{
+margin-left:25px;
+}
+
+.navbar a{
+text-decoration:none;
+color:#1e293b;
+font-weight:500;
+transition:0.3s;
+}
+
+.navbar a:hover{
+color:#2563eb;
+}
+
+/* hero */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:center;
+padding:80px 10%;
+gap:60px;
+background:#f8fafc;
+}
+
+/* profile image */
+
+.profile{
+width:250px;
+height:250px;
+border-radius:50%;
+object-fit:cover;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+transition:0.4s;
+}
+
+.profile:hover{
+transform:scale(1.05);
+}
+
+/* hero text */
+
+.hero-right h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero-right span{
+color:#2563eb;
+}
+
+.hero-right h3{
+margin-bottom:15px;
+color:#64748b;
+}
+
+.hero-right p{
+margin-bottom:20px;
+max-width:500px;
+}
+
+/* skill icons */
+
+.skills-icons{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.skill{
+background:white;
+padding:10px 15px;
+border-radius:8px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+font-size:14px;
+transition:0.3s;
+cursor:pointer;
+}
+
+.skill:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* tech colors */
+
+.fa-html5{color:#e34c26;}
+.fa-css3-alt{color:#264de4;}
+.fa-js{color:#f7df1e;}
+.fa-react{color:#61dbfb;}
+.fa-node{color:#3c873a;}
+.fa-database{color:#4db33d;}
+
+/* sections */
+
+section{
+padding:60px 10%;
+}
+
+h2{
+margin-bottom:20px;
+}
+
+/* project cards */
+
+.project-container{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.card{
+background:rgba(220, 235, 246, 0.326);
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 20px rgba(0,0,0,0.08);
+width:250px;
+transition:0.3s;
+}
+
+.card:hover{
+    background:rgba(144, 187, 217, 0.529) ;
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* footer */
+
+footer{
+text-align:center;
+padding:20px;
+background:#1e293b;
+color:white;
+margin-top:40px;
+}
