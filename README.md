@@ -1,13 +1,12 @@
-# 🚀 Internship Projects
+# Internship Projects
 
 This repository contains the projects I created while preparing for my internship.
-These projects demonstrate my skills in **HTML, CSS, and JavaScript** and show my ability to build interactive web applications.
-
+These projects demonstrate my skills in **HTML, CSS, and JavaScript** and show my ability to build web applications.
 
 
 # Projects
 
-##  Todo Task Manager
+## Todo Task Manager
 
 A simple task management application where users can manage their daily tasks efficiently.
 
@@ -27,13 +26,12 @@ https://adityaskakde.github.io/internship-projects/Intern%20To%20Do
 
 
 
-##  Personal Portfolio Website
+## Personal Portfolio Website
 
 A portfolio website to showcase my skills, projects, and contact information.
 
 ### Features
 
-* Responsive design
 * About section
 * Projects section
 * Skills section
@@ -45,14 +43,31 @@ https://adityaskakde.github.io/internship-projects/Intern%20Project%20Portfolio
 
 
 
-#  Technologies Used
+## Resume Website
+
+A simple resume website built using only HTML to showcase my profile.
+
+### Features
+
+* Header with name and profile photo
+* About Me section
+* Skills section
+* Projects and education details
+* Contact form
+
+### Live Demo
+
+https://adityaskakde.github.io/internship-projects/resume%20template/
+
+
+
+# Technologies Used
 
 * HTML
 * CSS
 * JavaScript
 * Git & GitHub
-* GitHub Pages (for deployment)
-
+* GitHub Pages
 
 
 ## Connect With Me
@@ -64,10 +79,8 @@ GitHub
 https://github.com/adityaskakde
 
 
-
-#  Author
+# Author
 
 **Aditya Kakde**
 
-Aspiring **Full Stack Developer (MERN Stack)** passionate about building web applications and learning modern technologies.
-
+Aspiring Full Stack Developer (MERN Stack) passionate about building web applications and learning new technologies.
