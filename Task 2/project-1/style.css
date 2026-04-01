@@ -1,0 +1,196 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  background: radial-gradient(circle at top, #0b1020, #020617);
+  color: #e2e8f0;
+  body {
+  overflow: hidden; /* unwanted scroll hata */
+}
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 30px;
+  background: rgba(255,255,255,0.02);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+.navbar a {
+  margin-left: 20px;
+  color: #cbd5f5;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #facc15;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  gap: 8px; /* 👈 gap FIX */
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  padding: 15px 12px;
+  background: rgba(2,6,23,0.9);
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+.song {
+  padding: 12px;
+  background: #0b1220;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.song:hover {
+  background: linear-gradient(45deg, #4f46e5, #7c3aed);
+}
+
+.song.active {
+  background: linear-gradient(45deg, #7c3aed, #facc15);
+  color: black;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 20px 15px; /* 👈 tighter */
+    height: calc(100vh - 70px); /* navbar height adjust */
+  overflow-y: auto;
+  .main {
+  padding-bottom: 90px; /* player ke liye space */
+}
+
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  gap: 18px; /* 👈 controlled spacing */
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.hero img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+}
+
+/* TEXT */
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.hero p {
+  color: #9ca3af;
+}
+
+/* PLAY BUTTON */
+.play-btn {
+  margin-top: 10px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #7c3aed, #facc15);
+  border: none;
+  border-radius: 30px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.play-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(124,58,237,0.4);
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.card, .playlist-card {
+  padding: 18px;
+  background: rgba(15,23,42,0.7);
+  border-radius: 14px;
+  min-width: 120px;
+  cursor: pointer;
+  transition: 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover, .playlist-card:hover {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  transform: translateY(-3px);
+}
+
+/* PLAYER */
+.player {
+  position: fixed;
+  bottom: 0;
+    height: 70px; /* consistent height */
+
+  width: 100%;
+  background: rgba(2,6,23,0.9);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+}
+
+.player button {
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  background: #0b1220;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.player button:hover {
+  background: linear-gradient(45deg, #7c3aed, #facc15);
+  color: black;
+  transform: scale(1.1);
+}
+
+/* PROGRESS */
+.progress-container {
+  flex: 1;
+  height: 6px;
+  background: #1e293b;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #7c3aed, #facc15);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(124,58,237,0.5);
+}

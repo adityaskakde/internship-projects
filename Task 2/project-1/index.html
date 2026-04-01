@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Royal Music UI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">🎼 Royal Beats</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Library</a>
+    <a href="#">Search</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h3>Your Playlist</h3>
+    <div id="playlist"></div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <img id="cover">
+      <div>
+        <h1 id="title"></h1>
+        <p id="artist"></p>
+
+        <button id="playBtn" class="play-btn">Play</button>
+      </div>
+    </section>
+
+    <!-- COMPOSERS -->
+    <section>
+      <h2>Popular Artists</h2>
+      <div class="cards">
+        <div class="card">Arijit Singh</div>
+        <div class="card">Jubin Nautiyal</div>
+        <div class="card">Atif Aslam</div>
+        <div class="card">Shreya Ghoshal</div>
+      </div>
+    </section>
+
+    <!-- PLAYLISTS -->
+    <section>
+      <h2>Playlists For You</h2>
+      <div class="cards">
+        <div class="playlist-card">Romantic Hits</div>
+        <div class="playlist-card">Sad Songs</div>
+        <div class="playlist-card">Lo-Fi Chill</div>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<!-- PLAYER -->
+<footer class="player">
+  <button id="prev">⏮</button>
+  <button id="play">▶</button>
+  <button id="next">⏭</button>
+
+  <div class="progress-container" id="progressContainer">
+    <div id="progress"></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
