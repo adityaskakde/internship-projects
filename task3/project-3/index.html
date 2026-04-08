@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartoon Internship Lab | Bouncy Animated Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page page-home">
+  <div class="preloader">
+    <div class="loader-ring"></div>
+  </div>
+  <div class="cursor" id="customCursor"></div>
+
+  <nav class="nav">
+    <a href="#home" class="brand">🎨 Cartoon Lab</a>
+    <div class="nav-links">
+      <a href="#home" class="nav-link nav-link--active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+      <span class="toggle-icon">🌙</span>
+      <span class="toggle-text">Dark Mode</span>
+    </button>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero__bg">
+        <img src="https://img.freepik.com/free-vector/hand-drawn-cartoon-background_23-2150318876.jpg" alt="Cartoon background" />
+      </div>
+      <div class="hero__overlay"></div>
+      <div class="hero__decor">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="hero__content">
+        <div class="hero__copy">
+          <span class="hero__eyebrow reveal-up delay-1">🎨 Cartoon Magic Lab</span>
+          <h1 class="hero__title reveal-up delay-2">Launch your internship portfolio with bouncy cartoon fun!</h1>
+          <p class="hero__text reveal-up delay-3">A playful SaaS-style landing experience built with HTML5, CSS3, and vanilla JavaScript. Bouncy animations, colorful gradients, and silly interactions bring your internship story to life with cartoon charm!</p>
+          <div class="hero__actions reveal-up delay-4">
+            <a class="btn btn--primary" href="#services">Explore Services</a>
+            <a class="btn btn--ghost" href="#about">Learn More</a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal-right delay-3">
+          <div class="hero__mockup">
+            <img src="https://img.freepik.com/free-vector/flat-design-laptop-illustration_23-2149250771.jpg" alt="Cartoon laptop" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section--intro scroll-reveal reveal-left delay-2">
+      <div class="section-header">
+        <div>
+          <h2>About the cartoon adventure</h2>
+          <p>Designed for internship builders who want a playful, memorable web presence, featuring bouncy animations, colorful gradients, and cartoon-style navigation for a complete fun web presentation.</p>
+        </div>
+        <div class="section-visual">
+          <img src="https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149342941.jpg" alt="Cartoon books" />
+        </div>
+      </div>
+      <div class="grid grid-3">
+        <article class="glass-card reveal-up delay-2">
+          <div class="card-badge">01</div>
+          <h3>🎭 Creative Cartoon Projects</h3>
+          <p>Build real-world UI and animation features for web experiences with cartoon flair.</p>
+        </article>
+        <article class="glass-card reveal-up delay-3">
+          <div class="card-badge">02</div>
+          <h3>🌈 Bouncy glow style</h3>
+          <p>Use cartoon gradients and neon accents to create an inviting playful aesthetic.</p>
+        </article>
+        <article class="glass-card reveal-up delay-4">
+          <div class="card-badge">03</div>
+          <h3>🎪 Growth-ready cartoon UI</h3>
+          <p>Build experiences that highlight your internship journey with fun and colorful design.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="section section--intro scroll-reveal reveal-up delay-3">
+      <div class="section-header">
+        <div>
+          <h2>Cartoon services for bouncy portfolios</h2>
+          <p>Each service is crafted to improve your presentation, design flow, and viewer experience with cartoon magic.</p>
+        </div>
+        <div class="section-visual">
+          <img src="https://img.freepik.com/free-vector/flat-design-illustration-customer-support_23-2148887720.jpg" alt="Cartoon design tools" />
+        </div>
+      </div>
+      <div class="grid grid-3">
+        <article class="glass-card reveal-up delay-2">
+          <div class="card-badge">A</div>
+          <h3>🎬 Hero cartoon animation</h3>
+          <p>Strong first impressions with animated headlines, buttons, and visual bounce.</p>
+        </article>
+        <article class="glass-card reveal-up delay-3">
+          <div class="card-badge">B</div>
+          <h3>🎨 Cartoon design system</h3>
+          <p>Consistent spacing, color palette, and typography for a playful finish.</p>
+        </article>
+        <article class="glass-card reveal-up delay-4">
+          <div class="card-badge">C</div>
+          <h3>🎯 Interactive cartoon UI</h3>
+          <p>Scroll triggers, hover bounces, and custom cursor interaction with fun effects.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section scroll-reveal reveal-left delay-2">
+      <div class="section-header">
+        <div>
+          <h2>Get in touch</h2>
+          <p>Fill out the form and tell us about your internship goals, design needs, or project ambitions.</p>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <form id="contact-form" class="contact-form reveal-up delay-3">
+          <div class="contact-field">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" />
+          </div>
+          <div class="contact-field">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@example.com" />
+          </div>
+          <div class="contact-field">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button class="btn btn--primary" type="button">Submit Request</button>
+        </form>
+
+        <div class="contact-info reveal-up delay-4">
+          <article class="info-card">
+            <h4>Contact details</h4>
+            <p>Email: hello@aestheticlab.dev</p>
+            <p>Phone: +1 234 567 890</p>
+          </article>
+          <article class="info-card">
+            <h4>Availability</h4>
+            <p>Monday to Friday — 9am to 6pm</p>
+          </article>
+          <article class="info-card">
+            <h4>Quick start</h4>
+            <p>Send your goals and portfolio link to get a fast response.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Aesthetic Internship Lab. Crafted for premium web portfolios.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
