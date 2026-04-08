@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHaven - Personal Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-book-open"></i>
+            <h3>BookHaven</h3>
+        </div>
+        <ul class="sidebar-menu">
+            <li class="active" data-section="dashboard">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </li>
+            <li data-section="add-book">
+                <i class="fas fa-plus-circle"></i>
+                <span>Add Book</span>
+            </li>
+            <li data-section="book-list">
+                <i class="fas fa-list"></i>
+                <span>My Library</span>
+            </li>
+            <li data-section="favorites">
+                <i class="fas fa-heart"></i>
+                <span>Favorites</span>
+            </li>
+            <li data-section="history">
+                <i class="fas fa-history"></i>
+                <span>History</span>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <button id="themeToggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+                <span>Dark Mode</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section active">
+            <div class="section-header">
+                <h1><i class="fas fa-tachometer-alt"></i> Dashboard</h1>
+                <p>Welcome to your personal library management system</p>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalBooks">0</h3>
+                        <p>Total Books</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="availableBooks">0</h3>
+                        <p>Available</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="borrowedBooks">0</h3>
+                        <p>Borrowed</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="favoriteBooks">0</h3>
+                        <p>Favorites</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Books -->
+            <div class="recent-section">
+                <h2><i class="fas fa-clock"></i> Recently Added</h2>
+                <div id="recentBooks" class="recent-books-grid">
+                    <!-- Recent books will be populated here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Book Section -->
+        <section id="add-book" class="section">
+            <div class="section-header">
+                <h1><i class="fas fa-plus-circle"></i> Add New Book</h1>
+                <p>Expand your personal library collection</p>
+            </div>
+
+            <form id="addBookForm" class="book-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="title">
+                            <i class="fas fa-heading"></i> Book Title *
+                        </label>
+                        <input type="text" id="title" required placeholder="Enter book title">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="author">
+                            <i class="fas fa-user"></i> Author *
+                        </label>
+                        <input type="text" id="author" required placeholder="Enter author name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="isbn">
+                            <i class="fas fa-hashtag"></i> ISBN
+                        </label>
+                        <input type="text" id="isbn" placeholder="978-0-123456-78-9">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">
+                            <i class="fas fa-tags"></i> Category *
+                        </label>
+                        <select id="category" required>
+                            <option value="">Select Category</option>
+                            <option value="Fiction">Fiction</option>
+                            <option value="Non-Fiction">Non-Fiction</option>
+                            <option value="Science">Science</option>
+                            <option value="Technology">Technology</option>
+                            <option value="History">History</option>
+                            <option value="Biography">Biography</option>
+                            <option value="Self-Help">Self-Help</option>
+                            <option value="Business">Business</option>
+                            <option value="Health">Health</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="publicationYear">
+                            <i class="fas fa-calendar"></i> Publication Year
+                        </label>
+                        <input type="number" id="publicationYear" min="1000" max="2026" placeholder="2023">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="imageUrl">
+                            <i class="fas fa-image"></i> Cover Image URL
+                        </label>
+                        <input type="url" id="imageUrl" placeholder="https://example.com/book-cover.jpg">
+                        <small class="form-hint">Leave empty for default cover</small>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="description">
+                            <i class="fas fa-align-left"></i> Description
+                        </label>
+                        <textarea id="description" rows="4" placeholder="Brief description of the book..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="clearForm" class="btn-secondary">
+                        <i class="fas fa-eraser"></i> Clear
+                    </button>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-plus"></i> Add Book
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Book List Section -->
+        <section id="book-list" class="section">
+            <div class="section-header">
+                <h1><i class="fas fa-list"></i> My Library</h1>
+                <p>Manage and explore your book collection</p>
+            </div>
+
+            <!-- Search and Filter Controls -->
+            <div class="controls-bar">
+                <div class="search-group">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search by title or author...">
+                </div>
+                <div class="filter-group">
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Non-Fiction">Non-Fiction</option>
+                        <option value="Science">Science</option>
+                        <option value="Technology">Technology</option>
+                        <option value="History">History</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Self-Help">Self-Help</option>
+                        <option value="Business">Business</option>
+                        <option value="Health">Health</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="sort-group">
+                    <select id="sortBy">
+                        <option value="title">Sort by Title</option>
+                        <option value="author">Sort by Author</option>
+                        <option value="year">Sort by Year</option>
+                        <option value="category">Sort by Category</option>
+                    </select>
+                    <select id="sortOrder">
+                        <option value="asc">Ascending</option>
+                        <option value="desc">Descending</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Books Grid -->
+            <div id="bookList" class="books-grid">
+                <!-- Books will be populated here -->
+            </div>
+        </section>
+
+        <!-- Favorites Section -->
+        <section id="favorites" class="section">
+            <div class="section-header">
+                <h1><i class="fas fa-heart"></i> Favorite Books</h1>
+                <p>Your most cherished reads</p>
+            </div>
+
+            <div id="favoritesList" class="books-grid">
+                <!-- Favorite books will be populated here -->
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section">
+            <div class="section-header">
+                <h1><i class="fas fa-history"></i> Borrowing History</h1>
+                <p>Track your reading journey</p>
+            </div>
+
+            <div id="historyList" class="history-list">
+                <!-- History items will be populated here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Book Details Modal -->
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div id="modalContent">
+                <!-- Book details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Book Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2><i class="fas fa-edit"></i> Edit Book</h2>
+            <form id="editBookForm" class="book-form">
+                <input type="hidden" id="editBookId">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="editTitle">Book Title *</label>
+                        <input type="text" id="editTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editAuthor">Author *</label>
+                        <input type="text" id="editAuthor" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editIsbn">ISBN</label>
+                        <input type="text" id="editIsbn">
+                    </div>
+                    <div class="form-group">
+                        <label for="editCategory">Category *</label>
+                        <select id="editCategory" required>
+                            <option value="Fiction">Fiction</option>
+                            <option value="Non-Fiction">Non-Fiction</option>
+                            <option value="Science">Science</option>
+                            <option value="Technology">Technology</option>
+                            <option value="History">History</option>
+                            <option value="Biography">Biography</option>
+                            <option value="Self-Help">Self-Help</option>
+                            <option value="Business">Business</option>
+                            <option value="Health">Health</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editPublicationYear">Publication Year</label>
+                        <input type="number" id="editPublicationYear" min="1000" max="2026">
+                    </div>
+                    <div class="form-group">
+                        <label for="editImageUrl">Cover Image URL</label>
+                        <input type="url" id="editImageUrl">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="editDescription">Description</label>
+                        <textarea id="editDescription" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" onclick="closeModal()" class="btn-secondary">Cancel</button>
+                    <button type="submit" class="btn-primary">Update Book</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
