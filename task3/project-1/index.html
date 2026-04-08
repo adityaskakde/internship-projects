@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crowdfunding Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">C</span>
+          <div>
+            <h1>CrowdLaunch</h1>
+            <p>Premium crowdfunding campaign manager</p>
+          </div>
+        </div>
+        <nav class="topnav">
+          <a href="#projects">Projects</a>
+          <a href="#create">Create</a>
+          <a href="#features">Features</a>
+        </nav>
+      </header>
+
+      <main class="layout">
+        <section class="hero card hero-premium">
+          <div class="hero-copy">
+            <span class="eyebrow">Internship Demo</span>
+            <h2>Build high-impact campaigns with smart funding and updates.</h2>
+            <p>Launch projects, track amounts, accept contributions, and publish progress with a premium UI built in HTML, CSS, and JavaScript.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#create">Start a campaign</a>
+              <a class="button button-secondary" href="#projects">See featured campaigns</a>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="key-metric">
+              <span class="metric-label">Total Raised</span>
+              <strong>$78,950</strong>
+            </div>
+            <div class="key-metric">
+              <span class="metric-label">Projects Live</span>
+              <strong>8</strong>
+            </div>
+            <div class="key-metric">
+              <span class="metric-label">Active Backers</span>
+              <strong>342</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="stats-grid" id="features">
+          <article class="stat-card card">
+            <h3>Campaign analytics</h3>
+            <p>See funding progress, backer counts, and goal completion at a glance.</p>
+          </article>
+          <article class="stat-card card">
+            <h3>Secure checkout flow</h3>
+            <p>Simulated payment processing adds a complete contribution experience.</p>
+          </article>
+          <article class="stat-card card">
+            <h3>Update management</h3>
+            <p>Publish project updates and keep supporters informed with timeline posts.</p>
+          </article>
+        </section>
+
+        <section class="workspace">
+          <aside class="panel card" id="create">
+            <div class="panel-header">
+              <h2>Create campaign</h2>
+              <p>Use the form to launch your project with funding goals and deadline details.</p>
+            </div>
+            <form id="create-project-form" class="form-stack">
+              <label>
+                Campaign title
+                <input type="text" name="title" placeholder="Solar backpack design" required />
+              </label>
+              <label>
+                Brief description
+                <textarea name="description" rows="4" placeholder="What problem does your campaign solve?" required></textarea>
+              </label>
+              <div class="form-row">
+                <label>
+                  Funding goal (USD)
+                  <input type="number" name="goal" min="100" placeholder="5000" required />
+                </label>
+                <label>
+                  Deadline
+                  <input type="date" name="deadline" required />
+                </label>
+              </div>
+              <label>
+                Campaign category
+                <select name="category">
+                  <option value="Education">Education</option>
+                  <option value="Technology">Technology</option>
+                  <option value="Health">Health</option>
+                  <option value="Environment">Environment</option>
+                </select>
+              </label>
+              <button class="button button-primary" type="submit">Launch campaign</button>
+            </form>
+          </aside>
+
+          <section class="main-content">
+            <div class="toolbar card">
+              <div>
+                <h2>Active campaigns</h2>
+                <p>Manage live projects, donations, updates, and campaign goals.</p>
+              </div>
+              <div class="toolbar-actions">
+                <input id="search-input" type="search" placeholder="Search campaigns" />
+                <select id="sort-select" aria-label="Sort campaigns">
+                  <option value="recent">Most recent</option>
+                  <option value="goal">Largest goal</option>
+                  <option value="raised">Most raised</option>
+                  <option value="ending">Ending soon</option>
+                </select>
+              </div>
+            </div>
+
+            <section id="projects-grid" class="projects-grid"></section>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal hidden" id="modal">
+      <div class="modal-backdrop"></div>
+      <div class="modal-card card">
+        <button class="modal-close" id="modal-close" aria-label="Close modal">×</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
